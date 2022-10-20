@@ -9,10 +9,9 @@
 #include <string>
 #include <chrono>
 
-using namespace std::chrono;
-
 template<typename T>
 void print_execute_time(const std::string &name, T func) {
+    using namespace std::chrono;
     system_clock::time_point start = system_clock::now();
     func();
     system_clock::time_point end = system_clock::now();
